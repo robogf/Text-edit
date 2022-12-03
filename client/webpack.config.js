@@ -31,13 +31,13 @@ module.exports = () => {
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'jate',
-        short_name: 'jate',
+        name: 'text editor',
+        short_name: 'textedit',
         description: 'write down your text',
         background_color: '#335ca3',
         theme_color: '#225ca3',
-        start_url: './',
-        publicPath: './',
+        start_url: '/',
+        publicPath: '/',
         icons: [
           {
           src: path.resolve('src/images/logo.png'),
@@ -59,7 +59,7 @@ module.exports = () => {
           test: /\.m?js$/i,
           exclude: /node_modules/,
 
-          user: {
+          use: {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
